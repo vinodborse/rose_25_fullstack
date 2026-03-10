@@ -1,13 +1,18 @@
 package com.skillio;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity(name = "std")
 public class Student {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int rollno;
 	private String name;
+	@Column(name = "city", nullable = true, unique = false)
 	private String address;
 	
 	public int getRollno() {
