@@ -10,6 +10,7 @@ public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long rollno;
+	
 	private String name;
 	private String address;
 	
